@@ -1,0 +1,18 @@
+name: Ligando o Python
+on:
+  push:
+  pull_request:
+
+jobs:
+  Python:
+  runs-on: ubuntu-lastest
+  steps:
+    - name: Setup Python
+      uses: actions/setup-python@v6.2.0
+    - name: obter codigo
+      uses: actions/checkout@v4
+    - name: executar programa
+      run:|
+          pwd
+          python app.py
+           
